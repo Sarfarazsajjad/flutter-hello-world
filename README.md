@@ -1,3 +1,18 @@
+## create a plugin with all platforms
+
+note that you first need to make sure that the platforms are all enabled. you can enable a platform using 
+
+`flutter config --enable-linux-desktop`
+`flutter config --enable-windows-desktop`
+`flutter config --enable-macos-desktop`
+
+`flutter create --platforms=android,ios --template=plugin <plugin name>`
+
+To add platforms, run
+
+`flutter create -t plugin --platforms <platforms> .` 
+
+under <plugin name>
 # startup_namer
 
 A new Flutter project.
