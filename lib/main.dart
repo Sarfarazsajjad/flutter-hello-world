@@ -7,14 +7,14 @@ import 'package:english_words/english_words.dart';
 import 'dart:ffi'; // For FFI
 import 'dart:io'; // For Platform.isX
 
-final DynamicLibrary nativeAddLib = Platform.isAndroid
-    ? DynamicLibrary.open("libnative_add.so")
-    : DynamicLibrary.process();
+// final DynamicLibrary nativeAddLib = Platform.isAndroid
+//     ? DynamicLibrary.open("libnative_add.so")
+//     : DynamicLibrary.process();
 
-final int Function(int x, int y) nativeAdd =
-  nativeAddLib
-    .lookup<NativeFunction<Int32 Function(Int32, Int32)>>("native_add")
-    .asFunction();
+// final int Function(int x, int y) nativeAdd =
+//   nativeAddLib
+//     .lookup<NativeFunction<Int32 Function(Int32, Int32)>>("native_add")
+//     .asFunction();
 
 void main() => runApp(MyApp());
 
@@ -45,7 +45,7 @@ class _RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('1 + 2 == ${nativeAdd(1, 2)}'),
+        title: Text('1 + 2 == '),
         actions: [
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
         ],
